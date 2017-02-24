@@ -1,0 +1,15 @@
+.footerspecial {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+.jumbotronspecial {
+margin-top: 50px;
+padding-left: 25px;
+
+}

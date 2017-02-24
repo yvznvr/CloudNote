@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+<form action="" method="post">{% csrf_token %}
+    <p>Silmek istediğine emin misin "{{ object }}"?</p>
+    <input type="submit" value="Evet!" />
+    <a href='/notlar/'><button type="button">Hayır</button></a>
+</form>
+</div>
+
+
+{% endblock %}

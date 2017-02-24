@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="jumbotron jumbotronspecial">
+  <h1>NoteCloud</h1>
+    {% if user.is_authenticated %}
+      <p>Hemen Notlarınızı Düzenlemeye Başlayın...</p>
+      <p><a class="btn btn-primary btn-lg" href="/notlar" role="button">Notlar</a></p>
+    {% else %}
+      <p>Notlarınıza her yerden erişebileceğiniz bir uygulama, üye ol ve kullanmaya başla</p>
+      <p><a class="btn btn-primary btn-lg" href="/usercreate" role="button">Kayıt Ol</a></p>
+    {% endif %}
+</div>
+
+
+{% endblock %}

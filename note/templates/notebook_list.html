@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<div class="container">
+  <h2>{{ user }} için Notlar</h2>
+  <p>Notlarınızı düzenleyebilir, silebilir yada yeni notlar ekleyebilirsiniz.</p>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Not Adı</th>
+        <th>Sil</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for article in object_list %}
+
+      <tr>
+        <td><a href='{{ article.get_absolute_url }}'>{{ article.title }}</a></td>
+        <td><a href='delete/{{ article.id}}'><button type="button">Notu sil</button></a></td>
+      </tr>
+    {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+    <div class="container">
+        <a href='create/'><button type="button">Yeni Not</button></a>
+    </div>
+
+
+{% endblock %}
